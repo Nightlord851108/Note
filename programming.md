@@ -1,6 +1,4 @@
-# Previous exam note:
-
-## Programming：
+# Programming：
 
 ### enum:
 The **enum** in c-lang is mostly used for status.
