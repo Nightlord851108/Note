@@ -1,4 +1,7 @@
 # Binary Relation
+## Inverse Relation(Converse Relation)
+The relation that occurs when the order of the elements is switched in the relation. For example, the inverse of the relation 'child of' is the relation 'parent of'.
+
 ## Reflexive
 For all x in X it holds that xRx. For example, "greater than or equal to" (≥) is a reflexive relation but "greater than" (>) is not.
 ## Irreflexive
@@ -7,6 +10,10 @@ For all x in X it holds that not xRx. For example, > is an irreflexive relation,
 For all x and y in X it holds that if xRy then x = y.
 ## Symmetric
 For all x and y in X, it holds that if xRy, then yRx
+### Question: If R and S are symmetric, R∩S is symmetric.
+**Ans: True**
+
+Let x (R∪S) y, which means (x,y)∈R∪S(x,y)∈R∪S. If (x,y)∈R, we have x R y, so y R x by symmetry, so (y,x)∈R⊆R∪S. If on the other side (x,y)∈S, it holds x S y, so y S x by symmetry, so (y,x)∈S⊆R∪S.
 ## Antisymmetric
 For all x and y in X, it holds that if xRy and yRx, then x = y. For example, ≥ is anti-symmetric; so is >, but vacuously (the condition in the definition is always false).
 ## Asymmetric
@@ -25,8 +32,9 @@ The relation is said to be non-transitive, if
 
 (a, b) ∈ R and (b, c) ∈ R do not imply (a, c ) ∈ R.
 
-### Question: Is the following statement tru? "For all transitive relations, if S and R are transitive relations, then S∪R is transitive."
+### Question: Is the following statement true? "For all transitive relations, if S and R are transitive relations, then S∪R is transitive."
 **Ans: False.**
+
 Suppose (x,y) is in R, and (y,z) is in S, but (x,z) is in neither.
 
 Then R and S could both be transitive, but  their union wouldn't be, because it would be missing (x, z).
