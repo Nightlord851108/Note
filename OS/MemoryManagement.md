@@ -8,6 +8,8 @@
 |Address      | The user specified address is divided by CPU into a **page number** and **offset**. | The user specifies each address by a **segment number** and the **offset (Segment limit)**.
 |Size         | The hardware decide page size | The segment size specified by user.
 |Table        | Page table that contains base address of each page. | Segmentation table contains segment number and offset (segment length).
+|Memory Used  | Paging requires more memory overhead to maintain the translation structures | Segmentation requires just two registers per segment: one to maintain the base of the segment and the other to maintain the extent of the segment. 
+| Entry       | Only one entry  | Requires two entries
 
 ## category
 * ![Paging](#Paging)
