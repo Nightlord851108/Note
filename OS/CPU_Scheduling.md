@@ -1,4 +1,6 @@
 # CPU Scheduling
+refs: https://www.geeksforgeeks.org/gate-notes-operating-system-process-scheduling/
+
 * Arrival Time:       Time at which the process arrives in the ready queue.
 
 * Completion Time:    Time at which process completes its execution.
