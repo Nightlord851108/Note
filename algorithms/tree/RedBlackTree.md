@@ -1,4 +1,4 @@
-# Red Black Tree
+# Red Black Tree
 ## Property
 1. Each node are either red or black.
 2. The root should be black, but not necessary.
@@ -37,7 +37,7 @@ private:
 }
 ```
 ## Rotation
-To keep the tree with the red-black tree property when we insert/delete an element to/from a red-black tree, we needs rotation to balance the tree structure.
+To keep the tree with the red-black tree property when we insert/delete an element to/from a red-black tree, we needs rotation to balance the tree structure.
 
 refs: http://alrightchiu.github.io/SecondRound/red-black-tree-rotationxuan-zhuan.html
 
@@ -103,10 +103,10 @@ void RBT::RightRotation(TreeNode *y){
 ```
 
 ## Insertion
-Since red-black tree belongs to binary search tree, when we insert an element, it should satisfy: Key(L) < Key(current) < Key(R), which is similar to BST insertion.
+Since red-black tree belongs to binary search tree, when we insert an element, it should satisfy: Key(L) < Key(current) < Key(R), which is similar to BST insertion.
 
 However, there's more in red-black tree insertion:
-1. NIL: All pointers point to null should be point to NIL in RBT.
+1. NIL: All pointers point to null should be point to NIL in RBT.
 2. Color: Normally, we add a new node with red color. If the parent of the new node is a black node, it satisfy the specification of RBT, however, if the parent is a red node, we need to use rotation to satisfy RBT.
 
 Here we use InsertRBT() to insert a node, and InsertFixedUpRBT(), called by InsertRBT(), to fixed our tree to satisfy the specification of RBT.
@@ -141,7 +141,7 @@ void RBT::InsertRBT(int key, string str){
         y->rightchild = insert_node;
     }
 
-    // The children of new node are NIL, and the color of new node should be red
+    // The children of new node are NIL, and the color of new node should be red
     insert_node->leftchild = neel;
     insert_node->rightchild = neel;
     insert_node->color = 0;
