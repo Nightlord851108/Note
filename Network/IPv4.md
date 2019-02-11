@@ -1,5 +1,10 @@
 # Internet Protocol
 
+## MAC address
+MAC address uses 48-bit (6 byte) addressing, present in hexadecimal. The first 24-bit decided by IEEE, and the last 24-bit decided by vendor
+
+Example:  99:aa:bb:cc:dd:ee
+
 ## IPv4
 IPv4 is a connectionless protocol used for **packet switched** networks.
 
