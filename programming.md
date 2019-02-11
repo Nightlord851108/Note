@@ -1,4 +1,6 @@
 # Programming：
+### C++ call by value
+When an object is pass to a function/method by value, it'll call copy constructor.
 
 ### enum:
 The **enum** in c-lang is mostly used for status.
