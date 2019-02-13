@@ -1,3 +1,6 @@
 # NOTE
-## [Programming](https://github.com/Nightlord851108/Note/blob/master/programming.md)
-## [algorithms](https://github.com/Nightlord851108/Note/blob/master/algorithms.md)
+## [Programming](./programming.md)
+## [Algorithms](./algorithms/README.md)
+## [OS](./OS/README.md)
+## [Computer Architecture](./ComputerArchitecture/README.md)
+## [Network](./Network/README.md)
