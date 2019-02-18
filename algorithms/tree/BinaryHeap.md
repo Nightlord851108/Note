@@ -1,6 +1,93 @@
 # Binary Heap
+![Binary Heap](https://www.geeksforgeeks.org/wp-content/uploads/binaryheap.png)
+## Node relation
+```
+PARENT(i)
+1  return floor(i/2)
 
-### C++ example from: https://www.geeksforgeeks.org/binary-heap/
+LEFT(i)
+1  return 2 * i
+
+RIGHT(i)
+1  return 2 * i+1
+```
+## Heapify
+Assume the binary trees rooted at LEFT(i) and RIGHT(i) are max-heap, but A[i] might be bigger than its children.<br/>
+Let a[i] float down in the heap, so the subtree rooted at i obeys the max-heap property.
+```
+MAX-HEAPIFY(A, i)  // Running time: O(lg(n))
+ 1  l = LEFT(i)
+ 2  r = RIGHT(i)
+ 3  if l ≤ A.heap_size and A[l] > A[i]
+ 4      largest = l
+ 5  else largest = i
+ 6  if r ≤ A.heap_size and A[r] > A[largest]
+ 7      largest = r
+ 8  if largest != i
+ 9      exchange A[i] with A[largest]
+10      MAX-HEAPIFY(A, i)
+```
+## Extract root
+If we want to extract the maximum/minimum number from heap, we can exchange the root with the last index, and discard node n.<br/>
+Then, finally, MAX/MIN-HEAPIFY the root and return the maximum/minimum number.
+```
+HEAP-EXTRACT-MAX(A)  // Running time: O(lg(n))
+1  if A.heap_size < 1
+2      error "heap underflow"
+3  max = A[1]
+4  A[1] = A[A.heap_size]
+5  A.heap_size = A.heap_size - 1
+6  MAX-HEAPIFY(A, 1)
+7  return max
+```
+## Insert
+To do insert in heap, we'll first add a minimum/maximum number to the end of the heap, then try to modify the tree to obey Max/Min Heap.<br/>
+Therefore, we are going to have HEAP-INCREASE/DECREASE-KEY first.
+```
+HEAP-INCREASE-KEY(A, i, key)  //
+1  if key < A[i]
+2      error "new key is smaller than current key"
+3  A[i] = key
+4  while i > 1 and A[PARENT(i)] < A[i]
+5      exchange A[i] with A[PARENT(i)]
+6      i = PARENT(i)
+```
+Next, we can implement INSERT function with HEAP-INCREASE/DECREASE-KEY.
+```
+INSERT(A, key)
+1  MINIMUM = -9999999
+2  A.heap_size = A.heap_size + 1
+3  A[A.heap_size] = MINIMUM
+4  HEAP-INCREASE-KEY(A, A.heap_size, key)
+```
+## Build a binary heap
+* Top-down: Keep insert all the nodes in to the heap.<br/>
+```
+BUILD-MAX-HEAP(A) // Top down, Running time: O(nlg(n))
+1  A.heap_size = A.length
+2  for i in A
+3      INSERT(i)
+```
+* Bottom-up: Represent all elements as complete binary tree in beginning, and do MinHeapify from last parent node.<br/>
+```
+BUILD-MAX-HEAP(A) // Bottom up, Running time: O(nlg(n))
+1  A.heap_size = A.length
+2  for i = floor(A.length/2) downto 1
+3      MAX-HEAPIFY(A, i)
+```
+## Heap sort algorithm
+To do heap sort, first of all, we build heap with HEAP-MAX-HEAP.<br/>
+Then, we can exchange the first element with the last element by exchange A[1] with 1[i], in line 3, and we could discard
+```
+HEAP-SORT(A)  // Running time: O(nlg(n))
+1  BUILD-MAX-HEAP(A)
+2  for i = A.length downto 2
+3      exchange A[1] with A[i]
+4      A.heap_size = A.heap_size - 1
+5      MAX-HEAPIFY(A, 1)
+```
+![heap sort](./img/HeapSort.png)<br/>
+## Min Heap C++ example from: https://www.geeksforgeeks.org/binary-heap/
 ```
 // A C++ program to demonstrate common Binary Heap Operations
 #include<iostream>
