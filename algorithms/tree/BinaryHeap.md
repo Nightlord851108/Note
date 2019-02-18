@@ -86,7 +86,7 @@ HEAP-SORT(A)  // Running time: O(nlg(n))
 4      A.heap_size = A.heap_size - 1
 5      MAX-HEAPIFY(A, 1)
 ```
-![heap sort](./img/HeapSort.png)<br/>
+![heap sort](./img/HeapSort.png)<br/>
 ## Min Heap C++ example from: https://www.geeksforgeeks.org/binary-heap/
 ```
 // A C++ program to demonstrate common Binary Heap Operations
