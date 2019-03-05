@@ -12,9 +12,9 @@
 | Entry       | Only one entry  | Requires two entries
 
 ## category
-* ![Paging](#Paging)
-* ![Segmentation](#Segmentation)
-* ![Demand Paging](#Demand-Paging)
+* [Paging](pPaging)
+* [Segmentation](#segmentation)
+* [Demand Paging](#demand-paging)
 
 ## Paging
 refs: https://www.geeksforgeeks.org/operating-system-paging/
