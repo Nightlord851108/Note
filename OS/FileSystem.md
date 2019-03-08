@@ -18,7 +18,7 @@ Allocate a continuous set of blocks to a file when the file created.
 * Declare the size of the file at the time of creation.
 
 ## Linked Allocation(Non-contiguous allocation)
-Allocation is on an individual block basis, each block contains a **pointer to the next block** in the chain.
+Allocation is on an individual block basis, each block contains a **pointer to the next block** in the chain.
 
 * Single entry for each file.
 
