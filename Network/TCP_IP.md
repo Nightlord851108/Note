@@ -2,10 +2,10 @@
 
 ## TCP/IP Model
 It's a concise version of OSI model. TCP/IP model contains four layers, instead of seven layers in OSI model.
-1. Network Access/Link layer
-2. Internet layer
-3. Host-to-Host/Transport layer
-4. Protocol/Application layer
+1. [Network Access/Link layer](#network-access-layer): Cover data-link and physical layer in OSI model. It's the method to transfer a packet from the internet layer of one machine to the internet layer of another.
+2. [Internet layer](#internet-layer): Cover network layer in OSI model. To transmit a packet through network.
+3. [Host-to-Host/Transport layer](#transport-layer): Cover transport layer in OSI model. To solve if the data to transport arrived, and whether the sequence of data arrived is correct problems.
+4. [Protocol/Application layer](#application-layer): Cover application, presentation, and session layers in OSI model. A layer for applications to communicate through internet.
 
 ### TCP/IP vs OSI
 ![TCP/IP model vs OSI model](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/tcpAndOSI.png)
@@ -36,7 +36,7 @@ The main protocols residing at this layer are :
 
 3. **ARP**: stands for Address Resolution Protocol. Its job is to find the hardware address of a host from a known IP address. ARP has several types: Reverse ARP, Proxy ARP, Gratuitous ARP and Inverse ARP.
 
-## Host-to-Host Layer
+## Transport Layer
 This layer is analogous to the transport layer of the OSI model. It is responsible for end-to-end communication and error-free delivery of data. It shields the upper-layer applications from the complexities of data.
 
 The two main protocols present in this layer are :
@@ -53,7 +53,7 @@ The two main protocols present in this layer are :
 | heavy-weight | lightweight |
 | used by HTTP, HTTPs, FTP, SMTP and Telnet | used by DNS, DHCP, TFTP, SNMP, RIP, and VoIP. |
 
-## Process Layer
+## Application Layer
 This layer performs the functions of top three layers of the OSI model: Application, Presentation and Session Layer.
 
 Some of the protocols present in this layer are: HTTP, HTTPS, FTP, TFTP, Telnet, SSH, SMTP, SNMP, NTP, DNS, DHCP, NFS, X Window, LPD
