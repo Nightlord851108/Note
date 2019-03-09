@@ -8,6 +8,7 @@
     -   [Binary Heap](./tree/BinaryHeap.md)
 -   [Master Method](./MasterMethod.md)
 -   [NP Complete](./NP_Complete.md)
+- [Dynamic Programming](./dynamic_programming.md)
 -   graph:
     -   [graph](./graph/graph.md)
     -   [DFS](./graph/dfs.md)
