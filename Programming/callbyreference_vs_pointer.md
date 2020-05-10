@@ -68,3 +68,41 @@ which is modifying the original array.
 
 This is the most common bug I've seen, which is due to passing a
 pointer argument through called by value.
+
+
+## Further Questions
+- Friend: Very appreciated.
+- Friend: It’s a really clear elaboration.
+- Friend: I agree with the author say, “It is doesn’t worth a lot to compare the two concepts in C++”
+- Friend: However, I still has some questions.
+
+1. It is almost the same for 
+```
+int foo(isn’t &a){
+  a=3;
+}
+
+int foo(int *a){
+  *a=3;
+}
+```
+right?
+
+### Ans
+To the execution purpose, yes, they can reach the same goal. 
+However, since their concepts are different basically, their's a slightly different in resource using. Since pointer is called by value, it's definitly using more resources than called by reference, since called by reference uses nearly no resource.
+But, again, it's not really worth to compare, since the copy of an address is just an 4 bytes, or 8 bytes, according to the OS, which is reaaly not a big deal in a modern computer; this might be worth in some embedded system, though.
+
+- Friend: 2. For the JavaScript’s demonstration, it means we only overwrite the “reference(pointer)” point to the variable and we don’t actually change the target variable it self,right. And if it will lead to the memory leak?
+
+### Ans
+Actually, it's not that easy to reach a memory leak in a language after Java, since almost all modern languages introduced garbage collector, which will release all the memories the program can no longer reach.
+But in this case, it's a similarly concept of memory leak. Yes, since we used "arr = []", we're no longer able to access the data binding array with the variable; however, this doesn't mean it caused a memory leak, although the concept is similar. 
+1. Since the framework still hold the reference of the array, it doesn't match the definition of memory leak. And the framework may provide API to get the array, in that case, the similar concept would also be gone.
+2. The dangerous of memory leak is that while the program's executing, the unused occupied memory kept increasing through the life time. However, in this case, the unreachable memory would be stable, since I can only lost a reference to a data binding variable, thus, the problem here will not be as dangerous as memory leak; the main problem is that it would cause some bugs among updating.
+
+
+- Friend: Sorry for I have few experience working on JavaScript. I will be very appreciative If you can give me further explains.
+### Ans
+Don't be, there's no reason for anyone to be familiar with all programming languages. 
+It's hard to explain the situation of bugs in Javascript, though, it would be better to understand when you face the problem some day in the future.
